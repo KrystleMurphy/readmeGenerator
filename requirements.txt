@@ -7,25 +7,25 @@ Create a command-line application that accepts user input.
 
 When a user is prompted for information about the application repository, a high-quality, professional README.md is generated with:
 
-The title of my project
+The title of my project✅
 
 Sections entitled:
 
-Description
+Description✅
 
-Table of Contents
+Table of Contents✅
 
-Installation
+Installation✅
 
-Usage
+Usage✅
 
-License
+License✅
 
-Contributing
+Contributing✅
 
-Tests
+Tests✅
 
-Questions
+Questions✅
 
 When a user enters the project title, it's displayed as the title of the README.
 
