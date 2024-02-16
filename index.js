@@ -64,27 +64,21 @@ inquirer.prompt([
 .then(answers => {
     // Handle the user's responses here
     console.log(answers);
-    function generateHTML(userInput) {
-        const { name, location, bio, linkedin, github } = userInput;
+    function generateREADME(userInput) {
+        const { title, description, contents, installation, usage, license, contributing, tests, questions } = userInput;
 
         // Construct the HTML content using template literals
-        const htmlContent = `
-            <html>
-            <head>
-                <title>Portfolio</title>
-            </head>
-            <body>
-                <h1>${name}'s Portfolio</h1>
-                <p><strong>Location:</strong> ${location}</p>
-                <p><strong>Bio:</strong> ${bio}</p>
-                <p><strong>LinkedIn:</strong> <a href="${linkedin}">${linkedin}</a></p>
-                <p><strong>GitHub:</strong> <a href="${github}">${github}</a></p>
-            </body>
-            </html>
-        `;
-
-        return htmlContent;
-    };
+        const readmeContent = `
+            # ${title}, 
+            ${description}, 
+            ${contents}, 
+            ${installation}, 
+            ${usage}, 
+            ${license}, 
+            ${contributing}, 
+            ${tests}, 
+            ${questions}, 
+            `
     fs.writeFile('readme.md', generateREADME(content), err => {
         if (err) {
             console.error(err);
