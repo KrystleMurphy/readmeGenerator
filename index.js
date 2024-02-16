@@ -4,7 +4,6 @@ const inquirer = require('inquirer');
 inquirer.prompt([
     { type: 'input', name: 'title', message: 'What is the title of your project?' },
     { type: 'input', name: 'description', message: 'Describe your project:' },
-    { type: 'input', name: 'contents', message: 'List the contents of your project:' },
     { type: 'input', name: 'installation', message: 'Installation guidance:' },
     { type: 'input', name: 'usage', message: 'Usage:' },
     {
@@ -20,7 +19,7 @@ inquirer.prompt([
     },
     { type: 'input', name: 'contributing', message: 'Contributing:' },
     { type: 'input', name: 'tests', message: 'Tests:' },
-    { type: 'input', name: 'questions', message: 'Questions:' }
+    { type: 'input', name: 'questions', message: 'enter your email address so people can get in touch if the have questions' }
 ]).then(answers => {
     console.log(answers);
     generateREADME(answers);
@@ -33,25 +32,30 @@ function generateREADME(userInput) {
 # ${title}
 ${description}
 
-## Contents
-${contents}
+## Table ofContents
+-#${installation}
+-#${usage}
+-#${license}
+-#${contributing}
+-#${tests}
+-#${questions}    
 
-## Installation
+### Installation
 ${installation}
 
-## Usage
+### Usage
 ${usage}
 
-## License
+### License
 ${license}
 
-## Contributing
+### Contributing
 ${contributing}
 
-## Tests
+### Tests
 ${tests}
 
-## Questions
+### Questions
 ${questions}
 `;
 
